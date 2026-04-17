@@ -7,14 +7,23 @@
   font-family: 'Roboto', sans-serif;
 }
 
-header, footer {
+header {
   background-color: #111;
   width: 100vw;
   height: 30vh;
 }
 
+footer {
+  background-color: #111;
+  width: 100vw;
+  height: 50vh;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 nav ul {
-  background-color: rgb(55, 128, 196);
+  background-color: #3780c4;
   width: 100vw;
   height: 10vh;
   display: flex;
@@ -26,4 +35,21 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: white;
+}
+
+.card {
+  width: 30vw;
+  height: 30vh;
+  /*background-color: lightblue;*/
+  padding: 30px;
+  margin-top: 30px;
+}
+
+footer .frostline-card p {
+  font-size: 0.7rem;
+  margin-top: 10px;
+}
+
+.social-icons {
+  margin-top: 20px;
 }

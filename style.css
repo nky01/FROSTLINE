@@ -50,6 +50,7 @@ footer {
   height: 50vh;
   color: white;
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
 }
 
@@ -68,15 +69,19 @@ nav ul li a {
   color: white;
 }
 
-.card {
-  width: 30vw;
+.frostline-card {
+  width: 25vw;
   height: 30vh;
-  padding: 30px;
-  margin-top: 30px;
 }
 
 .quick-links-card {
-  width: 15vw;
+  width: 13vw;
+  height: 30vh;
+}
+
+.contact-us-card {
+  width: 13vw;
+  height: 30vh;
 }
 
 footer .frostline-card p {

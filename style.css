@@ -36,6 +36,7 @@ header {
   background-image: url(images/snowboarding.jpg);
   background-position:center;
   background-size: cover;
+  background-attachment: fixed;
 
 }
 

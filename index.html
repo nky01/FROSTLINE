@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <div class="container">
+        <header>
         <a href="#inicio">
-            <img class="logo" src="images/FROSTLINE.png" alt="
+            <img class="logo" src="images/logo.png" alt="
             FROSTLINE Logo" title="FROSTLINE">
         </a>
     </header>
-    <div></div>
     <nav>
         <ul>
             <li><a href="#inicio">INICIO</a></li>
@@ -21,28 +21,50 @@
             <li><a href="#contact-us">CONTACTO</a></li>
         </ul>
     </nav>
+    </div>
     <main>
         <div id="inicio">
-            <h1 class="main-title">FROSTLINE</h1>
             <div class="image"></div>
+            <div class="container-inicio">
+                <h1 class="main-title">FROSTLINE</h1>
+                <p>Te acompaña en cada movimiento</p>
+                <button class="producto-btn">Productos</button>
+            </div>
         </div>
         <div id="productos">
             <h2>PRODUCTOS / NOVEDADES</h2>
-            <div class="productos-img">
-                <img src="products/glasses-1.avif" alt="glasses-1">
-                <img src="products/glasses-2.avif" alt="glasses-2">
-                <img src="products/glasses-3.avif" alt="glasses-3">
-                <img src="products/jacket-1.avif" alt="jacket-1">
-                <img src="products/jacket-2.avif" alt="jacket-2">
-                <img src="products/jacket-3.avif" alt="jacket-3">
-                <img src="products/tabla-snow-1.png" alt="tabla-snow-1">
-                <img src="products/tabla-snow-2.png" alt="tabla-snow-2">
-                <img src="products/tabla-snow-3.webp" alt="tabla-snow-3">
+            <div class="productos-container">
+                <div class="product-card">
+                    <img src="products/glasses-1.avif" alt="glasses-1">
+                    <p>Gafas</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="products/jacket-2.avif" alt="jacket-2">
+                    <p>Camperas</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="products/tabla-snow-1.png" alt="tabla-snow-1">
+                    <p>Tablas</p>
+                </div>
             </div>
         </div>
 
-        <div class="video">
+        <div class="video-container">
             <video src="videos/video.mp4" controls poster="images/portada_video.jpg"></video>
+            <div class="video-txt">
+                <h3>VIVA EL <br>DEPORTE!</h3>
+                <div class="txt">
+                    <img src="icons/verificado-icon.png" alt="verificado-icon"><p>100% verificado</p>
+                </div>
+                <div class="txt">
+                    <img src="icons/copo-de-nieve.png" alt="copo-de-nieve"><p>Apta para temperaturas bajas</p>
+                </div>
+                <div class="txt">
+                    <img src="icons/montana-icon.png" alt=""><p>Equipamiento para  realizar actividades físicas</p>
+                </div>
+            </div>
         </div>
 
         <div class="hablanos">

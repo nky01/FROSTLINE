@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 /* ================== VARIABLES ================== */
 :root {
   --white: #fff;
   --black: #111;
-  --blue: #3780c4;
+  --blue: #4373D0;
 }
 
 /* ================== RESET GENERAL ================== */
@@ -12,15 +10,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* ================== HEADER ================== */
-header {
-  background-color: var(--black);
+.container {
   width: 100vw;
-  height: 18vh;
+  height: auto;  
+  background-color: rgba(1,1,1, 0.7);
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  position: fixed;
 }
 
 header .logo {
@@ -31,9 +32,9 @@ header .logo {
 
 /* ================== NAV ================== */
 nav ul {
-  background-color: var(--blue);
-  font-size: 1.1rem;
-  width: 100vw;
+  font-size: 1rem;
+  font-weight: 300;
+  width: 40vw;
   height: 10vh;
   display: flex;
   justify-content: space-evenly;
@@ -54,25 +55,38 @@ nav ul li a:hover {
 /* ================== MAIN ================== */
 
 /* ---- Sección inicio ---- */
-#inicio {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container-inicio{
+  position: absolute;
+  bottom: 75px;
+  left: 50px;
 }
 
 .main-title {
-  position: absolute;
-  text-align: center;
-  font-size: 3rem;
+  font-size: 7rem;
+  font-weight: 800;
+  color: var(--black);
+}
+.container-inicio p {
+  font-size: 1.5rem;
+  font-weight: 330;
   color: var(--white);
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+.producto-btn {
+  font-size: 1.2rem;
+  font-weight: 330;
+  margin-top: 20px;
+  padding: 20px 40px;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  cursor: pointer
+  ;
 }
 
 .image {
   width: 100vw;
-  height: 70vh;
-  background-image: url(images/snowboarding.jpg);
-  background-position: center;
+  height: 100vh;
+  background-image: url(images/main-img.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -91,30 +105,70 @@ nav ul li a:hover {
   font-weight: 300;
 }
 
-.productos-img {
-  width: 50vw;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.productos-container {
+  width: 70vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 10px;
 }
 
-.productos-img img {
+.product-card{
+  width: 30%;
+  height: 100%;
+  background-color: lightblue;
+  text-align: center;
+}
+
+.product-card img {
   width: 100%;
-  height: auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.product-card p {
+  margin-top: 20px;
+  font-size: 1rem;
 }
 
 /* ---- Sección productos ---- */
-.video {
-  padding: 120px;
+.video-container {
+  margin-top: 150px;
+  height: 60vh;
+  background-color: var(--black);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 video {  
-  width: 60%;
-  border-radius: 10px;
+  height: 100%;
+}
+.video-txt {
+  width: 100%;
+  height: 100%;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 80px;
+  gap: 10px;
+}
+
+.video-txt h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.video-txt img {
+  width: 30px;
+  margin-right: 5px;
+}
+
+.txt {
+  display: flex;
+  align-items: center;
 }
 
 

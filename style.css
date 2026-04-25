@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* ================== VARIABLES ================== */
+:root {
+  --white: #fff;
+  --black: #111;
+  --blue: #3780c4;
+}
+
+/* ================== RESET GENERAL ================== */
 * {
   margin: 0;
   padding: 0;
@@ -7,55 +15,24 @@
   font-family: 'Roboto', sans-serif;
 }
 
+/* ================== HEADER ================== */
 header {
-  background-color: #111;
+  background-color: var(--black);
   width: 100vw;
-  height: 30vh;
-}
-
-.main-title {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-size: 3rem;
-}
-
-#productos {
-  margin-top: 60px;
-  text-align: center;
-}
-
-#productos h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-.image {
-  width: 100vw;
-  height: 40vh;
-  background-image: url(images/snowboarding.jpg);
-  background-position:center;
-  background-size: cover;
-  background-attachment: fixed;
-
-}
-
-.productos-img img {
-  width: 20rem;
-}
-
-footer {
-  background-color: #111;
-  width: 100vw;
-  height: 50vh;
-  color: white;
-  display: flex;
+  height: 18vh;
   align-items: center;
-  justify-content: space-evenly;
 }
 
+header .logo {
+  margin-left: 20px;
+  width: 120px;
+  height: auto;
+}
+
+/* ================== NAV ================== */
 nav ul {
-  background-color: #3780c4;
+  background-color: var(--blue);
+  font-size: 1.1rem;
   width: 100vw;
   height: 10vh;
   display: flex;
@@ -66,26 +43,107 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
 }
 
+nav ul li a:hover {
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* ================== MAIN ================== */
+
+/* ---- Sección inicio ---- */
+#inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title {
+  position: absolute;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--white);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.image {
+  width: 100vw;
+  height: 70vh;
+  background-image: url(images/snowboarding.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ---- Sección productos ---- */
+#productos {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#productos h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.productos-img {
+  width: 50vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.productos-img img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Sección productos ---- */
+.video {
+  padding: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video {  
+  width: 60%;
+  border-radius: 10px;
+}
+
+
+/* ================== FOOTER ================== */
+footer {
+  background-color: var(--black);
+  width: 100vw;
+  height: 50vh;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* ---- Cards del footer ---- */
 .frostline-card {
   width: 25vw;
   height: 30vh;
 }
 
-.quick-links-card {
-  width: 13vw;
-  height: 30vh;
-}
-
+.quick-links-card,
 .contact-us-card {
   width: 13vw;
   height: 30vh;
 }
 
-footer .frostline-card p {
-  font-size: 0.8rem;
+/* ---- Contenido frostline ---- */
+footer .frostline-card p,.contact-info p  {
+  font-size: 1rem;
   margin-top: 10px;
 }
 
@@ -102,13 +160,15 @@ footer .frostline-card p {
   margin-right: 10px;
 }
 
-.quick-links-card h4, .contact-us-card h4 {
+/* ---- Quick links ---- */
+.quick-links-card h4,
+.contact-us-card h4 {
   margin-top: 22px;
 }
 
 .quick-links {
   margin-top: 35px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   list-style: none;
 }
 
@@ -118,15 +178,11 @@ footer .frostline-card p {
 
 .quick-links li a {
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
 }
 
+/* ---- Contact info ---- */
 .contact-info {
   margin-top: 35px;
   width: 140px;
-}
-
-.contact-info p {
-  font-size: 0.8rem;
-  margin-bottom: 10px;
 }

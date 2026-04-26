@@ -3,6 +3,7 @@
   --white: #fff;
   --black: #111;
   --blue: #4373D0;
+  --gray: #dedede;
 }
 
 /* ================== RESET GENERAL ================== */
@@ -13,20 +14,23 @@
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ================== HEADER ================== */
 .container {
   width: 100vw;
-  height: auto;  
-  background-color: rgba(1,1,1, 0.7);
+  height: 15vh;  
+  background-color: var(--black);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
 }
 
 header .logo {
   margin-left: 20px;
-  width: 120px;
+  width: 110px;
   height: auto;
 }
 
@@ -57,7 +61,7 @@ nav ul li a:hover {
 /* ---- Sección inicio ---- */
 .container-inicio{
   position: absolute;
-  bottom: 75px;
+  bottom: 80px;
   left: 50px;
 }
 
@@ -85,29 +89,30 @@ nav ul li a:hover {
 
 .image {
   width: 100vw;
-  height: 100vh;
+  height: 85vh;
   background-image: url(images/main-img.jpg);
   background-size: cover;
+  background-position: 50% 50%;
   background-attachment: fixed;
 }
 
 /* ---- Sección productos ---- */
 #productos {
-  margin-top: 100px;
+  max-width: 1200px;
+  margin: 150px auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 #productos h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  font-weight: 300;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  font-weight: 400;
 }
 
 .productos-container {
-  width: 70vw;
-  height: 50vh;
+  width: 100%;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -117,23 +122,23 @@ nav ul li a:hover {
 .product-card{
   width: 30%;
   height: 100%;
-  background-color: lightblue;
   text-align: center;
 }
 
 .product-card img {
   width: 100%;
-  height: 100%;
+  height: 80%;
+  object-fit: contain;
 }
 
 .product-card p {
   margin-top: 20px;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
-/* ---- Sección productos ---- */
+/* ---- Sección video ---- */
 .video-container {
-  margin-top: 150px;
+  margin: 150 auto;
   height: 60vh;
   background-color: var(--black);
   display: flex;
@@ -142,7 +147,9 @@ nav ul li a:hover {
 }
 
 video {  
+  height: 50%;
   height: 100%;
+  object-fit: cover;
 }
 .video-txt {
   width: 100%;
@@ -171,12 +178,106 @@ video {
   align-items: center;
 }
 
+/* ---- Sección reviews ---- */
+.reviews {
+  max-width: 1200px;
+  margin: 150px auto;
+}
+.reviews h2{
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  font-weight: 400;
+}
+.reviews-cards{
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr);
+  gap: 10px;
+}
+.card {
+  width: 26vw;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid var(--gray);
+  border-radius: 10px;
+  box-shadow: 5px 8px 8px var(--gray);
+}
+.card p {
+  text-align: center;
+}
+.estrellas img {
+  width: 40px;
+  height: auto;
+}
+
+/* ---- Sección Contactanos ---- */
+.contactanos {
+  margin: 150px 0;
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.contactanos-card {
+  width: 25%;
+  margin-right: 40px;
+}
+
+.contactanos-card, .contactanos-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactanos-card h2{
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+form label {
+  margin-bottom: 10px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--black);
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--black);  
+}
+
+.contactanos-btn {
+  font-size: 1rem;
+  font-weight: 330;
+  margin-top: 20px;
+  padding: 20px 40px;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+}
+
+.contactanos-img img {
+  width: 100%;
+  height: 100%;
+}
 
 /* ================== FOOTER ================== */
 footer {
   background-color: var(--black);
-  width: 100vw;
-  height: 50vh;
+  padding: 100px 20px;
+  height: auto;
   color: var(--white);
   display: flex;
   align-items: center;
@@ -239,4 +340,55 @@ footer .frostline-card p,.contact-info p  {
 .contact-info {
   margin-top: 35px;
   width: 140px;
+}
+
+/* ================== MEDIA QUERIES ================== */
+@media only screen and (max-width: 600px) {
+  .container nav ul{
+    margin-right: 30px;
+  }
+  .container nav ul a {    
+    font-size: 0.6rem;
+  }
+  .container-inicio h1 {
+    font-size: 4rem;
+  }
+
+  .video-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .video-container video {
+    width: 100vw;
+    height: auto;
+  }
+  .video-txt {
+    background-color: var(--black);
+  }
+
+  .reviews {
+    padding: 40px 40px;
+  }
+  .reviews-cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    width: 80vw;
+  }
+
+  .contactanos {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .contactanos-card {
+    padding: 40px 40px;
+    width: 100vw;
+    height: auto;
+  }
+  .contactanos-img {
+    padding: 40px;
+  }
 }

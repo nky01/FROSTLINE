@@ -13,14 +13,14 @@
             <img class="logo" src="images/logo.png" alt="
             FROSTLINE Logo" title="FROSTLINE">
         </a>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#inicio">INICIO</a></li>
-            <li><a href="#productos">PRODUCTOS</a></li>
-            <li><a href="#contact-us">CONTACTO</a></li>
-        </ul>
-    </nav>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#productos">PRODUCTOS</a></li>
+                <li><a href="#contact-us">CONTACTO</a></li>
+            </ul>
+        </nav>
     </div>
     <main>
         <div id="inicio">
@@ -67,18 +67,73 @@
             </div>
         </div>
 
-        <div class="hablanos">
-            <h2>Hablanos!</h2>
-            <form action="">
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre">
+        <div class="reviews">
+            <h2>RESEÑAS</h2>
+            <div class="reviews-cards">
+                <div class="card">
+                    <div class="estrellas">
+                        <img src="icons/estrella.png" alt="estrella-icon">
+                        <img src="icons/estrella.png" alt="estrella-icon">
+                        <img src="icons/estrella.png" alt="estrella-icon">
+                        <img src="icons/estrella.png" alt="estrella-icon">
+                        <img src="icons/estrella.png" alt="estrella-icon">
+                    </div>
+                    <p>
+                        “Las camperas son increíbles, súper abrigadas y cómodas. Las usé en un viaje a la nieve y no pasé frío en ningún momento. Además, el diseño es hermoso.”
+                    </p>
+                    <h3>Martina Lopez</h3>
+                </div>
 
-                <label for="correo">Correo electrónico:</label>
-                <input type="email" name="correo" id="correo">
+                <div class="card">
+                    <div class="estrellas">
+                        <img src="icons/estrella.png" alt="estrella-icon">
+                        <img src="icons/estrella.png" alt="estrella-icon">
+                        <img src="icons/estrella.png" alt="estrella-icon">
+                        <img src="icons/estrella.png" alt="estrella-icon">
+                        <img src="icons/estrella.png" alt="estrella-icon">
+                    </div>
+                    <p>
+                        “Compré unas gafas y la calidad es excelente. Buena visibilidad, no se empañan y se sienten resistentes. Muy recomendable para deportes de invierno.”
+                    </p>
+                    <h3>Santiago Rios</h3>
+                </div>
 
-                <label for="mensaje">Mensaje:</label>
-                <textarea name="mensaje" id="mansaje" rows="7" cols="50" placeholder="Escribe tu mensaje..."></textarea>
-            </form>
+                <div class="card">
+                    <div class="estrellas">
+                        <img src="icons/estrella.png" alt="estrella-icon">
+                        <img src="icons/estrella.png" alt="estrella-icon">
+                        <img src="icons/estrella.png" alt="estrella-icon">
+                        <img src="icons/estrella.png" alt="estrella-icon">
+                        <img src="icons/estrella.png" alt="estrella-icon">
+                    </div>
+                    <p>
+                        “Me encantó la experiencia de compra. Los productos tienen muy buen acabado y se nota que están pensados para el uso real en la montaña.”                    </p>
+                    <h3>Valentina Torres</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="contactanos" id="contact-us">
+            <div class="contactanos-card">
+                <h2>CONTACTANOS!</h2>
+                <form 
+                    action="https://formspree.io/f/mykbzded" 
+                    method="post"
+                >
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" required>
+
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" name="correo" id="correo" required>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" rows="7" cols="50" placeholder="Escribe tu mensaje..." required></textarea>
+                    <button class="contactanos-btn" type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="contactanos-img">
+                <img src="images/contact-us-img.avif" alt="contact us">
+            </div>
         </div>
     </main>
 
@@ -104,7 +159,7 @@
             </ul>
         </div>
 
-        <div class="contact-us-card" id="contact-us">
+        <div class="contact-us-card">
             <h4>Contact us</h4>
             <div class="contact-info">
                 <p class="address">123 Example Road Buenos Aires, Argentina</p>
